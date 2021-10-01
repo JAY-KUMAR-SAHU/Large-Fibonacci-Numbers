@@ -1,4 +1,4 @@
-//  FIRST 20,000 FIBONACCI NUMBERS /////////////////////////////////////////////
+//  FIBONACCI NUMBERS /////////////////////////////////////////////
 
 #include <stdio.h>
 #include <math.h>
@@ -23,7 +23,6 @@ int main()
         // Number of digits in n-th Fibonacci number
         // Using BINET'S FORMULA
         // n*Log10(1.6180339887498948) - (Log10 5)/2
-        // 4180 is the number of digits in 20,000th Fibonacci number
 
         char f[d+1], s[d+1], ans[d+1];
         f[0] = 1; s[0] = 1;
