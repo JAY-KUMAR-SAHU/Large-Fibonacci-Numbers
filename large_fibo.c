@@ -5,12 +5,6 @@
 #include <stdlib.h>
 #define z 1.6180339887498948
 
-int f[4181] = {0}, s[4181] = {0}, ans[4181] = {0};
-// Number of digits in n-th Fibonacci number
-// Using BINET'S FORMULA
-// n*Log10(1.6180339887498948) - (Log10 5)/2
-// 4180 is the number of digits in 20,000th Fibonacci number
-
 int main()
 {
     int n, k = 1, x = 1, X = 1;
@@ -25,6 +19,13 @@ int main()
     }
 
     else{
+        int d = (int)(ceil(n * log10(1.6180339887498948)  -  log10(5) / 2));
+        // Number of digits in n-th Fibonacci number
+        // Using BINET'S FORMULA
+        // n*Log10(1.6180339887498948) - (Log10 5)/2
+        // 4180 is the number of digits in 20,000th Fibonacci number
+
+        char f[d+1], s[d+1], ans[d+1];
         f[0] = 1; s[0] = 1;
         int c = 0, i = 0;  // c=carry, i=index  
 
@@ -59,7 +60,7 @@ int main()
             X = k;  // changing length of second array to that of answer_array
 
             for (int y = 0; y < x; y++) { f[y] = s[y];   } // f[x]=s[x]
-            for (int y = 0; y < X; y++) { s[y] = ans[y];} // s[X]=ans[X]
+            for (int y = 0; y < X; y++) { s[y] = ans[y]; } // s[X]=ans[X]
         }
 
         for (int i = k - 1; i >= 0; i--){
