@@ -1,6 +1,7 @@
 //  FIRST 20,000 FIBONACCI NUMBERS /////////////////////////////////////////////
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int f[4181] = {0}, s[4181] = {0}, ans[4181] = {0};
 // Number of digits in n-th Fibonacci number
@@ -20,8 +21,8 @@ int main()
     f[0] = 0; s[0] = 1;
     int c = 0, i = 0;  // c=carry, i=index  
 
-    if (n == 1)      {printf("0\n");}
-    else if (n == 2) {printf("1\n");}
+    if (n == 1)      {printf("0"); exit(1);}
+    else if (n == 2) {printf("1"); exit(1);}
     n-=2;   // first 2 are already there
 
     while(n--)
