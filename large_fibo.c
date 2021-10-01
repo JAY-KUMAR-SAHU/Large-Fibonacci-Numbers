@@ -11,7 +11,7 @@ int main()
     // x : length of first number
     // X : length of second number
     // k : number of digits in answer starting from 1
-    printf("Fibonacci Numbers starting from ZERO :: 0 1 1 2 3 5 8 ...    i.e. Fibo(0) = 0,  Fibo(1) = 1\n         Enter n (0 <= n <= 20,000)  :: ");
+    printf("Fibonacci Numbers starting from ZERO :: 0 1 1 2 3 5 8 ...    i.e. Fibo(0) = 0,  Fibo(1) = 1\n         Enter n (0 <= n <= 50,000)  :: ");
     scanf("%d", &n);
 
     if(n<=70){
